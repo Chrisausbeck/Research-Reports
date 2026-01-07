@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LLHP — Domain Selections</title>
+  <style>
+    body { margin:0; font-family:system-ui,Segoe UI,Arial; background:#0b0c10; color:#e9eef5; }
+    header { background:#0f1117; border-bottom:1px solid rgba(255,255,255,.1); }
+    .header-inner { max-width:1500px; margin:auto; padding:14px 16px; }
+    .container { max-width:1500px; margin:auto; padding:18px 16px 44px; }
+    table { border-collapse:collapse; min-width:1200px; }
+    th, td { border-top:1px solid rgba(255,255,255,.1); padding:12px; vertical-align:top; }
+    th { width:300px; background:rgba(255,255,255,.02); }
+    .row-title { font-weight:700; margin-bottom:6px; }
+    .warn { background:rgba(255,200,0,.1); border:1px solid rgba(255,200,0,.35); padding:8px; border-radius:10px; font-size:12px; }
+    .plot { width:560px; border:1px solid rgba(255,255,255,.1); border-radius:10px; overflow:hidden; }
+    .ptitle { padding:8px; font-size:12px; color:#a9b2c2; border-bottom:1px solid rgba(255,255,255,.1); }
+    iframe { width:560px; height:520px; border:0; background:white; }
+  </style>
+</head>
+<body>
+<header><div class="header-inner"><h1>LLHP — Domain Selections</h1></div></header>
+<div class="container">
+<table>
+<tr>
+<th>System</th>
+<th>All residues</th>
+<th>Reg</th>
+<th>Linker</th>
+<th>DBD</th>
+</tr>
+
+<tr>
+<th><div class='row-title'>LLHP — APO</div><div class='warn'><strong>Note:</strong> Structural alignment has not been checked. Plots may be inaccurate near domain transitions.</div></th>
+<td><div class='plot'><div class='ptitle'>All residues</div><iframe src='name=LLHP-apo__sel=all_residues.html'></iframe></div></td>
+<td><div class='plot'><div class='ptitle'>Reg</div><iframe src='name=LLHP-apo__sel=Reg.html'></iframe></div></td>
+<td><div class='plot'><div class='ptitle'>Linker</div><iframe src='name=LLHP-apo__sel=Linker.html'></iframe></div></td>
+<td><div class='plot'><div class='ptitle'>DBD</div><iframe src='name=LLHP-apo__sel=DBD.html'></iframe></div></td>
+</tr>
+
+<tr>
+<th><div class='row-title'>LLHP — LIG</div><div class='warn'><strong>Note:</strong> Structural alignment has not been checked. Plots may be inaccurate near domain transitions.</div></th>
+<td><div class='plot'><div class='ptitle'>All residues</div><iframe src='name=LLHP-lig__sel=all_residues.html'></iframe></div></td>
+<td><div class='plot'><div class='ptitle'>Reg</div><iframe src='name=LLHP-lig__sel=Reg.html'></iframe></div></td>
+<td><div class='plot'><div class='ptitle'>Linker</div><iframe src='name=LLHP-lig__sel=Linker.html'></iframe></div></td>
+<td><div class='plot'><div class='ptitle'>DBD</div><iframe src='name=LLHP-lig__sel=DBD.html'></iframe></div></td>
+</tr>
+</table></div></body></html>
