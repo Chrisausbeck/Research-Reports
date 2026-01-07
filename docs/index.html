@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Reports</title>
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #12141a;
+      --panel2: #0f1117;
+      --text: #e9eef5;
+      --muted: #a9b2c2;
+      --border: rgba(255,255,255,0.10);
+      --shadow: 0 8px 24px rgba(0,0,0,0.35);
+      --radius: 14px;
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    a { color: var(--text); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(to bottom, rgba(11,12,16,0.96), rgba(11,12,16,0.86));
+      backdrop-filter: blur(8px);
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 16px 44px;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0.2px;
+    }
+    .title p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card {
+      margin-top: 18px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 14px 16px 10px;
+      background: var(--panel2);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .card-header h2 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .tag {
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      white-space: nowrap;
+    }
+
+    .card-body {
+      padding: 12px 16px 14px;
+    }
+
+    .report-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .report {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 12px 10px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .report-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .report a {
+      font-weight: 650;
+      font-size: 14px;
+    }
+
+    .report .date {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .report p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    code {
+      background: rgba(255,255,255,0.06);
+      padding: 1px 6px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container title">
+      <h1>Research Reports</h1>
+      <p>
+        Public, static HTML reports hosted via GitHub Pages.
+        Add new reports under <code>docs/reports/&lt;YYYY-MM-DD&gt;_&lt;short-name&gt;/</code>.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>All reports</h2>
+        <span class="tag">GitHub Pages</span>
+      </div>
+
+      <div class="card-body">
+        <ul class="report-list">
+
+          <!-- EXAMPLE REPORT ENTRY (copy/paste and edit) -->
+          <li class="report">
+            <div class="report-top">
+              <a href="reports/2026-01-07_dci_absmax/">DCI AbsMax Report (Example)</a>
+              <span class="date">2026-01-07</span>
+            </div>
+            <p>
+              Short description goes here (system, conditions, what the report contains).
+            </p>
+          </li>
+
+          <li class="report">
+            <div class="report-top">
+              <a href="reports/2026-02-15_pca_neutral/">PCA Neutral/Rheostat (Example)</a>
+              <span class="date">2026-02-15</span>
+            </div>
+            <p>
+              Short description goes here (dataset, key takeaway, intended audience).
+            </p>
+          </li>
+
+          <!-- Add new report entries above this line -->
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>How to add a new report</h2>
+        <span class="tag">Workflow</span>
+      </div>
+      <div class="card-body">
+        <ol style="margin:0; padding-left:18px; color: var(--muted); font-size: 13px;">
+          <li>Create a new folder under <code>docs/reports/</code> (e.g., <code>docs/reports/2026-03-01_my_report/</code>).</li>
+          <li>Copy your report files into that folder (must include an <code>index.html</code>).</li>
+          <li>Add a new list entry in this page linking to <code>reports/2026-03-01_my_report/</code>.</li>
+          <li><code>git add .</code> → <code>git commit -m "Add report 2026-03-01"</code> → <code>git push</code>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <footer>
+      Tip: add an empty <code>docs/.nojekyll</code> file to avoid GitHub Pages Jekyll processing edge cases.
+    </footer>
+  </main>
+</body>
+</html>
+
